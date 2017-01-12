@@ -1,0 +1,31 @@
+{
+  "name": "httprip",
+  "version": "0.0.1",
+  "description": "Manages queues of requests for data processing and collection.",
+  "main": "index.js",
+  "dependencies": {
+    "request": "latest",
+    "jsdom": "^9.9.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tstiegler/httprip.git"
+  },
+  "keywords": [
+    "http",
+    "ripping",
+    "scraping",
+    "spider"
+  ],
+  "author": "Thomas Stiegler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tstiegler/httprip/issues"
+  },
+  "homepage": "https://github.com/tstiegler/httprip#readme"
+}

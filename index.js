@@ -15,7 +15,9 @@ var HttpRip = function() {
         processQueuedOpts(null, resolve);
     });
 
+
     // Public functions.
+
 
     /**
      * Queue a request for ripping.
@@ -72,7 +74,19 @@ var HttpRip = function() {
         _.each(dataFuncs, function(df) { df(inData); });        
     }
 
+
+    /**
+     * Inject a different request instance.
+     * 
+     * @param {request} inRequest       Request instance.
+     */
+    function setRequester(inRequest) {
+        request = inRequest;
+    }
+
+
     // Private functions.
+
 
     /**
      * Process a queued request, forward the result to all given processors.
@@ -87,8 +101,8 @@ var HttpRip = function() {
             return;
         }
        
-        // Perform the request.
-        request(opts, function(error, response, body) {
+       // Perform the request.
+       request(opts, function(error, response, body) {
             // Add a promise for every given processor to an array and run the processor methods.
             var subProcessorPromises = [];
             _.each(procFuncs, function(pf) {
@@ -113,7 +127,7 @@ var HttpRip = function() {
         processor: processor,
         data: data,
         yield: yield,
-        request: request
+        setRequester: setRequester
     };
     return instance;
 }

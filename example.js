@@ -1,5 +1,5 @@
 
-var httprip     = require("./index.js");
+var httprip     = require("httprip");
 var fs          = require("fs");
 var request     = require("request");
 var jsdom       = require("jsdom");

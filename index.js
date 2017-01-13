@@ -4,7 +4,6 @@
 var HttpRip = function() {
     var request     = require("request");
     var _           = require("lodash");
-    var jsdom       = require("jsdom");
 
     var instance;
     var procFuncs = [];
